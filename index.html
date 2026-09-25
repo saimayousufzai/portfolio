@@ -201,13 +201,9 @@
             <div class="skill-icon figma-icon">
               <svg viewBox="0 0 24 24">
                 <path d="M8 2h4v6H8a3 3 0 1 1 0-6z" fill="#F24E1E" />
-
                 <path d="M12 2h4a3 3 0 1 1 0 6h-4V2z" fill="#FF7262" />
-
                 <path d="M8 8h4v6H8a3 3 0 1 1 0-6z" fill="#A259FF" />
-
                 <path d="M12 8h4a3 3 0 1 1 0 0-6h-4v6z" fill="#1ABCFE" />
-
                 <path d="M8 14h4v3a3 3 0 1 1-4-3z" fill="#0ACF83" />
               </svg>
             </div>
@@ -473,28 +469,122 @@
 
           <!-- PROJECT 4 -->
 
-          <a
-            href="https://saimayousufzai.github.io/beauty-product/"
-            class="project reveal"
-          >
+          <a href="https://momina-noori.vercel.app/" class="project reveal">
             <div class="project-left">
               <div class="project-image">
-                <img
-                  src="image/Screenshot 2026-08-21 083446.png"
-                  alt="Beauty Product Website"
-                />
+                <img src="image/momena.png" alt="Beauty Product Website" />
 
                 <span class="project-overlay"> View ↗ </span>
               </div>
 
               <div>
-                <h3>Beauty Product Website</h3>
-                <p>Mobile App Design</p>
+                <h3>portfolios</h3>
+                <p>Web page</p>
               </div>
             </div>
 
             <span class="project-year"> 2026 </span>
           </a>
+
+          <!-- ================= HIDDEN PROJECTS ================= -->
+
+          <div id="moreProjects" style="display: none">
+            <!-- PROJECT 5 -->
+
+            <a
+              href=" https://saimayousufzai.github.io/beauty-product/"
+              class="project reveal"
+            >
+              <div class="project-left">
+                <div class="project-image">
+                  <img src="image/beauty.png" alt="Project 5" />
+
+                  <span class="project-overlay"> View ↗ </span>
+                </div>
+
+                <div>
+                  <h3>Beauty Product Website</h3>
+                  <p>Mobile App Design</p>
+                </div>
+              </div>
+
+              <span class="project-year"> 2026 </span>
+            </a>
+
+            <!-- PROJECT 6 -->
+            <!-- Replace the details below with your real Project 6 -->
+
+            <a
+              href="https://momina-noori-6le5.vercel.app/ "
+              class="project reveal"
+            >
+              <div class="project-left">
+                <div class="project-image">
+                  <img src="image/humaira.png" alt="Project 6" />
+
+                  <span class="project-overlay"> View ↗ </span>
+                </div>
+
+                <div>
+                  <h3>portfolios</h3>
+                  <p>Web design</p>
+                </div>
+              </div>
+
+              <span class="project-year"> 2026 </span>
+            </a>
+
+            <!-- PROJECT 7 -->
+
+            <a
+              href="https://my-projects-rxmm.vercel.app/"
+              class="project reveal"
+            >
+              <div class="project-left">
+                <div class="project-image">
+                  <img src="image/AI CUSTOMER.png" alt="AI CUSTOMER" />
+
+                  <span class="project-overlay"> View ↗ </span>
+                </div>
+
+                <div>
+                  <h3>AI CUSTOMER</h3>
+                  <p>UI / UX Design</p>
+                </div>
+              </div>
+
+              <span class="project-year"> 2026 </span>
+            </a>
+
+            <!-- PROJECT 8 -->
+            <!-- Replace the details below with your real Project 8 -->
+
+            <a href="#" class="project reveal">
+              <div class="project-left">
+                <div class="project-image">
+                  <img src="image/netlinks.png" alt="Project 8" />
+
+                  <span class="project-overlay"> View ↗ </span>
+                </div>
+
+                <div>
+                  <h3>Netlinks Website</h3>
+                  <p>Web Design</p>
+                </div>
+              </div>
+
+              <span class="project-year"> 2026 </span>
+            </a>
+          </div>
+
+          <!-- MORE PROJECTS BUTTON -->
+
+          <div class="hero-buttons">
+            <button type="button" class="secondary-btn" id="moreProjectsBtn">
+              More Projects
+              <span>↓</span>
+            </button>
+          </div>
         </div>
       </section>
 
@@ -765,6 +855,36 @@
 
           project.style.setProperty("--mouse-y", `${y}px`);
         });
+      });
+
+      /* MORE PROJECTS */
+
+      const moreProjectsBtn = document.getElementById("moreProjectsBtn");
+
+      const moreProjects = document.getElementById("moreProjects");
+
+      moreProjectsBtn.addEventListener("click", () => {
+        const isHidden = moreProjects.style.display === "none";
+
+        if (isHidden) {
+          moreProjects.style.display = "block";
+
+          moreProjects.querySelectorAll(".reveal").forEach((project) => {
+            project.classList.add("visible");
+          });
+
+          moreProjectsBtn.innerHTML = `
+            Show Less
+            <span>↑</span>
+          `;
+        } else {
+          moreProjects.style.display = "none";
+
+          moreProjectsBtn.innerHTML = `
+            More Projects
+            <span>↓</span>
+          `;
+        }
       });
     </script>
   </body>
